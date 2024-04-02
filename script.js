@@ -31,13 +31,19 @@ const collectEmployees = function() {
 
     keepGoing = confirm("Do you want to add another employee?");
   }
-
+    displayAverageSalary(employees)
   return employees;
 }
 
 // Display the average salary
 const displayAverageSalary = function(employeesArray) {
-  
+  let salary = 0  
+  const numberEmployees = employeesArray.length 
+  for (const employee of employeesArray) {
+    salary += employee.salary 
+  }
+  const average = salary/numberEmployees
+  console.log (average)
 }
 
 // Select a random employee
